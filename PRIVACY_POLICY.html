@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — CoWriterAI Writing Assistant</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f0f13;
+      color: #e2e8f0;
+      line-height: 1.7;
+      padding: 2rem;
+    }
+    .container { max-width: 720px; margin: 0 auto; }
+    nav { margin-bottom: 3rem; }
+    nav a {
+      color: #a78bfa;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    nav a:hover { text-decoration: underline; }
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #f8fafc 40%, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .date { color: #64748b; font-size: 0.9rem; margin-bottom: 2.5rem; }
+    h2 { font-size: 1.2rem; font-weight: 700; margin: 2rem 0 0.75rem; color: #c4b5fd; }
+    p { color: #94a3b8; margin-bottom: 1rem; }
+    ul { color: #94a3b8; padding-left: 1.5rem; margin-bottom: 1rem; }
+    ul li { margin-bottom: 0.5rem; }
+    strong { color: #e2e8f0; }
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #1e1e2e;
+      text-align: center;
+      color: #475569;
+      font-size: 0.85rem;
+    }
+    footer a { color: #7c3aed; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav><a href="index.html">← Back to CoWriterAI</a></nav>
+
+    <h1>Privacy Policy</h1>
+    <p class="date">Last Updated: February 23, 2026</p>
+
+    <h2>Overview</h2>
+    <p>CoWriterAI is a privacy-first AI writing assistant. We believe your writing is private and treat it that way.</p>
+
+    <h2>What We Do NOT Collect</h2>
+    <ul>
+      <li><strong>Your text content</strong> — Text is only sent to the AI when you explicitly press the hotkey or click an action button. It is processed transiently and never stored on our servers.</li>
+      <li><strong>Browsing history</strong> — We do not track or record which websites you visit.</li>
+      <li><strong>Personal information</strong> — We do not collect names, emails, or any identifying information.</li>
+      <li><strong>Passwords or payment info</strong> — The extension automatically skips password and payment fields.</li>
+    </ul>
+
+    <h2>What We Do Collect</h2>
+    <ul>
+      <li><strong>Style preferences (local only)</strong> — When you accept an AI suggestion, a brief record is stored in <code>chrome.storage.local</code> on your device. This data never leaves your browser.</li>
+      <li><strong>Anonymous client ID</strong> — A randomly generated UUID used solely for JWT authentication with the gateway. Not linked to any personal information.</li>
+      <li><strong>Usage counters</strong> — The gateway tracks aggregate request counts per client ID for rate limiting. No text content is logged.</li>
+    </ul>
+
+    <h2>How AI Processing Works</h2>
+    <p>When you trigger an AI action:</p>
+    <ul>
+      <li>Your selected text is sent over HTTPS to the CoWriterAI gateway.</li>
+      <li>The gateway forwards it to the configured LLM provider (Groq).</li>
+      <li>The AI suggestion is returned to your browser.</li>
+      <li><strong>No text is logged, stored, or retained at any step.</strong></li>
+    </ul>
+
+    <h2>Third-Party Services</h2>
+    <p><strong>Groq (LLM Provider)</strong> — CoWriterAI uses the Groq API for fast AI inference. Groq's API terms state:</p>
+    <ul>
+      <li>Groq does not use your prompts to train AI models.</li>
+      <li>Text is processed ephemerally — not stored in a database.</li>
+      <li>API usage provides enterprise-grade privacy vs. consumer web interfaces.</li>
+    </ul>
+    <p><strong>Stripe (Payments)</strong> — Pro subscription billing is handled by Stripe. Stripe's privacy policy governs payment data. We never see or store your card details.</p>
+
+    <h2>Data Storage</h2>
+    <p>All user preferences are stored locally in <code>chrome.storage.local</code>:</p>
+    <ul>
+      <li>Gateway URL and hotkey configuration</li>
+      <li>Style profile (last 100 accepted suggestions)</li>
+      <li>Authentication token</li>
+    </ul>
+
+    <h2>Your Rights</h2>
+    <ul>
+      <li><strong>Delete your data</strong>: Click "Clear Style Profile" in the extension popup, or uninstall the extension.</li>
+      <li><strong>Self-host</strong>: Run the gateway on your own server for complete data control.</li>
+      <li><strong>Inspect</strong>: All code is open source and auditable on <a href="https://github.com/GzJmac/ai-cowriter" target="_blank">GitHub</a>.</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>For privacy questions, email <a href="mailto:jpgalik@gmail.com">jpgalik@gmail.com</a> or open an issue on <a href="https://github.com/GzJmac/ai-cowriter/issues" target="_blank">GitHub</a>.</p>
+
+    <footer>
+      <p><a href="index.html">← CoWriterAI Home</a> · © 2026 CoWriterAI</p>
+    </footer>
+  </div>
+</body>
+</html>
