@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CoWriterAI — AI Writing Assistant for Chrome</title>
-  <meta name="description" content="CoWriterAI: privacy-first AI writing assistant for Chrome. Rewrite, summarize, adjust tone — right where you type. Free tier + Pro at $4/mo." />
+  <meta name="description" content="CoWriterAI: privacy-first AI writing assistant for Chrome. Rewrite, fix grammar, summarize, adjust tone — right where you type. Free tier includes 20 actions/day. Pro is $4/mo." />
+  <meta property="og:title" content="CoWriterAI — AI Writing Assistant for Chrome" />
+  <meta property="og:description" content="Highlight any text, press Alt+Shift+A, and get instant AI rewrites, grammar fixes, tone adjustments and more. Works on every website." />
+  <meta property="og:type" content="website" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -230,6 +233,32 @@
     .step h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem; }
     .step p { color: #94a3b8; font-size: 0.9rem; }
 
+    /* FAQ */
+    .faq-list { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+    .faq-item {
+      background: #1a1a2e;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .faq-item h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; color: #e2e8f0; }
+    .faq-item p { color: #94a3b8; font-size: 0.9rem; line-height: 1.6; }
+
+    /* CTA BANNER */
+    .cta-banner {
+      background: linear-gradient(135deg, rgba(124,58,237,0.25), rgba(168,85,247,0.15));
+      border: 1px solid rgba(124,58,237,0.3);
+      border-radius: 20px;
+      padding: 4rem 2rem;
+      text-align: center;
+      margin: 0 2rem 5rem;
+      max-width: 1060px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-banner h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 1rem; }
+    .cta-banner p { color: #94a3b8; margin-bottom: 2rem; }
+
     /* FOOTER */
     footer {
       text-align: center;
@@ -254,9 +283,10 @@
     <div class="nav-links">
       <a href="#features">Features</a>
       <a href="#pricing">Pricing</a>
-      <a href="https://github.com/GzJmac/ai-cowriter" target="_blank">GitHub</a>
+      <a href="#faq">FAQ</a>
+      <a href="PRIVACY_POLICY.html">Privacy</a>
     </div>
-    <a href="https://chrome.google.com/webstore" class="nav-cta" target="_blank">Add to Chrome — Free</a>
+    <a href="https://chrome.google.com/webstore/detail/cowriterai/jbbmhhikdbgajapnpapceoefipckfkil" class="nav-cta" target="_blank">Add to Chrome — Free</a>
   </nav>
 
   <!-- HERO -->
@@ -265,7 +295,7 @@
     <h1>Write better,<br />right where you type</h1>
     <p>CoWriterAI brings AI writing assistance to every text field in your browser. Select text, press a hotkey, done.</p>
     <div class="hero-actions">
-      <a href="https://chrome.google.com/webstore" class="btn-primary" target="_blank">Add to Chrome — It's Free</a>
+      <a href="https://chrome.google.com/webstore/detail/cowriterai/jbbmhhikdbgajapnpapceoefipckfkil" class="btn-primary" target="_blank">Add to Chrome — It's Free</a>
       <a href="https://github.com/GzJmac/ai-cowriter" class="btn-secondary" target="_blank">View on GitHub</a>
     </div>
   </div>
@@ -312,9 +342,10 @@
   <div style="max-width:1100px;margin:0 auto;padding:0 2rem 5rem;">
     <div class="actions-section">
       <p class="section-label" style="text-align:center;">8 Writing Actions</p>
-      <h2 style="margin-bottom:0.5rem;">One hotkey. Eight transformations.</h2>
+      <h2 style="margin-bottom:0.5rem;">One hotkey. Nine transformations.</h2>
       <p style="text-align:center;color:#64748b;max-width:480px;margin:0 auto;">Select any text and instantly choose the transformation you need.</p>
       <div class="actions-grid">
+        <div class="action-pill">🔤 Fix Grammar</div>
         <div class="action-pill">✏️ Rewrite</div>
         <div class="action-pill">📋 Summarize</div>
         <div class="action-pill">📖 Expand</div>
@@ -371,7 +402,7 @@
           <li>Style learning</li>
           <li>Works everywhere</li>
         </ul>
-        <a href="https://chrome.google.com/webstore" class="btn-secondary" style="display:block;text-align:center;" target="_blank">Get Started Free</a>
+        <a href="https://chrome.google.com/webstore/detail/cowriterai/jbbmhhikdbgajapnpapceoefipckfkil" class="btn-secondary" style="display:block;text-align:center;" target="_blank">Get Started Free</a>
       </div>
       <div class="pricing-card featured">
         <div class="pricing-tag">Most Popular</div>
@@ -385,10 +416,51 @@
           <li>Priority response speed</li>
           <li>Cancel anytime</li>
         </ul>
-        <a href="https://chrome.google.com/webstore" class="btn-primary" style="display:block;text-align:center;" target="_blank">Upgrade to Pro</a>
+        <a href="https://chrome.google.com/webstore/detail/cowriterai/jbbmhhikdbgajapnpapceoefipckfkil" class="btn-primary" style="display:block;text-align:center;" target="_blank">Get Pro — $4/mo</a>
+        <p style="font-size:0.78rem;color:#64748b;margin-top:0.75rem;">Upgrade inside the extension after installing</p>
       </div>
     </div>
   </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <p class="section-label">FAQ</p>
+    <h2>Common questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>Does CoWriterAI see everything I type?</h3>
+        <p>No. Your text is <strong>only sent to our servers when you explicitly trigger an action</strong> (by pressing Alt+Shift+A and choosing a transformation). We never monitor, log, or auto-scan what you type.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What AI model powers it?</h3>
+        <p>CoWriterAI uses Llama 3.1 via the Groq API — a fast, capable open-weight model. Your text is sent to Groq's servers only at the moment you request a transformation, and is not used to train any models.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What's included in the Free tier?</h3>
+        <p>20 AI actions per day — all 9 writing transformations, live grammar check, and style learning. The limit resets every day at midnight UTC. No credit card required.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I upgrade to Pro?</h3>
+        <p>Install the extension, sign in with Google or email in the Account tab, then click <strong>Upgrade to Pro</strong> in the Billing tab. You'll be taken to a secure Stripe checkout. Pro activates instantly.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I cancel Pro anytime?</h3>
+        <p>Yes. Open the extension → Billing → Manage Subscription to access the Stripe customer portal and cancel with one click. No questions asked, no fees.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does it work on Google Docs / Gmail / LinkedIn?</h3>
+        <p>Yes — CoWriterAI works on virtually every website with a text field. This includes Gmail, Google Docs, Notion, Slack, LinkedIn, Twitter/X, Reddit, HubSpot, and more.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <p class="section-label">Get Started</p>
+    <h2>Start writing better today — it's free</h2>
+    <p>No credit card. No account required to start. 20 AI actions free every day.</p>
+    <a href="https://chrome.google.com/webstore/detail/cowriterai/jbbmhhikdbgajapnpapceoefipckfkil" class="btn-primary" target="_blank" style="display:inline-block;">Add to Chrome — It's Free</a>
+  </div>
 
   <!-- FOOTER -->
   <footer>
