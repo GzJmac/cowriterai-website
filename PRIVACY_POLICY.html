@@ -51,61 +51,42 @@
     <nav><a href="index.html">← Back to CoWriterAI</a></nav>
 
     <h1>Privacy Policy</h1>
-    <p class="date">Last Updated: February 23, 2026</p>
+    <p class="date">Last Updated: September 22, 2026</p>
 
     <h2>Overview</h2>
     <p>CoWriterAI is a privacy-first AI writing assistant. We believe your writing is private and treat it that way.</p>
 
-    <h2>What We Do NOT Collect</h2>
+    <h2>What We Collect</h2>
     <ul>
-      <li><strong>Your text content</strong> — Text is only sent to the AI when you explicitly press the hotkey or click an action button. It is processed transiently and never stored on our servers.</li>
-      <li><strong>Browsing history</strong> — We do not track or record which websites you visit.</li>
-      <li><strong>Personal information</strong> — We do not collect names, emails, or any identifying information.</li>
-      <li><strong>Passwords or payment info</strong> — The extension automatically skips password and payment fields.</li>
-    </ul>
-
-    <h2>What We Do Collect</h2>
-    <ul>
-      <li><strong>Style preferences (local only)</strong> — When you accept an AI suggestion, a brief record is stored in <code>chrome.storage.local</code> on your device. This data never leaves your browser.</li>
-      <li><strong>Anonymous client ID</strong> — A randomly generated UUID used solely for JWT authentication with the gateway. Not linked to any personal information.</li>
-      <li><strong>Usage counters</strong> — The gateway tracks aggregate request counts per client ID for rate limiting. No text content is logged.</li>
+      <li><strong>Writing text when you request a feature</strong> — Selected text is sent to our gateway when you run an AI action. Nearby document context is sent only if you enable that setting. Text in supported fields is sent for live grammar checks only if you turn that feature on. The extension attempts to skip password, payment, and sensitive-looking fields.</li>
+      <li><strong>Local preferences and style signals</strong> — When you accept a suggestion, the extension stores the action, time, and source/accepted text snippets (up to 160 characters each, with up to 24 saved entries) in <code>chrome.storage.local</code>. Lightweight style/tone signals learned from live grammar are also stored locally. Live grammar and nearby-document context are off by default.</li>
+      <li><strong>Sign-in information</strong> — Guest mode uses a random client ID. If you sign in with email or Google, we store your email and an account identifier derived from it. Google may also provide your name and profile image. Google data is used to authenticate you and provide account features.</li>
+      <li><strong>Cloud style sync</strong> — If you sign in and use this feature, accepted-edit preference snippets are sent to and stored by our gateway for access across devices. Live-grammar style/tone signals remain local.</li>
+      <li><strong>Billing information</strong> — Stripe processes payments. We store subscription status and Stripe customer/subscription identifiers needed to provide and manage Pro access; we do not receive or store your full card number.</li>
+      <li><strong>Usage events</strong> — We record sign-in, checkout-start, Pro activation, and billing-portal events against a pseudonymous account identifier for unique counts and conversion measurement. These analytics records expire after up to 400 days. Request counts are also used for rate limits.</li>
+      <li><strong>Operational logs</strong> — Our gateway logs request method, API route, response status, duration, and IP address for operation and security. It does not log request bodies or writing text.</li>
     </ul>
 
     <h2>How AI Processing Works</h2>
-    <p>When you trigger an AI action:</p>
-    <ul>
-      <li>Your selected text is sent over HTTPS to the CoWriterAI gateway.</li>
-      <li>The gateway forwards it to the configured LLM provider (Groq).</li>
-      <li>The AI suggestion is returned to your browser.</li>
-      <li><strong>No text is logged, stored, or retained at any step.</strong></li>
-    </ul>
+    <p>When you request an AI action or enable live grammar, relevant text is sent over HTTPS to the CoWriterAI gateway and forwarded to our configured AI provider (Groq) to return a result. The gateway is designed not to log request bodies or writing text. The AI provider processes the text under its own terms and privacy practices. Do not use the live grammar feature with confidential writing unless you are comfortable sending that text for processing.</p>
 
     <h2>Third-Party Services</h2>
-    <p><strong>Groq (LLM Provider)</strong> — CoWriterAI uses the Groq API for fast AI inference. Groq's API terms state:</p>
     <ul>
-      <li>Groq does not use your prompts to train AI models.</li>
-      <li>Text is processed ephemerally — not stored in a database.</li>
-      <li>API usage provides enterprise-grade privacy vs. consumer web interfaces.</li>
-    </ul>
-    <p><strong>Stripe (Payments)</strong> — Pro subscription billing is handled by Stripe. Stripe's privacy policy governs payment data. We never see or store your card details.</p>
-
-    <h2>Data Storage</h2>
-    <p>All user preferences are stored locally in <code>chrome.storage.local</code>:</p>
-    <ul>
-      <li>Gateway URL and hotkey configuration</li>
-      <li>Style profile (last 100 accepted suggestions)</li>
-      <li>Authentication token</li>
+      <li><strong>Groq</strong> processes text to provide AI suggestions.</li>
+      <li><strong>Google Sign-In</strong> authenticates users who choose it and supplies basic profile information.</li>
+      <li><strong>Resend</strong> delivers email sign-in codes.</li>
+      <li><strong>Stripe</strong> processes subscription payments and billing management.</li>
+      <li><strong>Render and Upstash</strong> host the gateway and store account, style-sync, rate-limit, and subscription data.</li>
     </ul>
 
-    <h2>Your Rights</h2>
-    <ul>
-      <li><strong>Delete your data</strong>: Click "Clear Style Profile" in the extension popup, or uninstall the extension.</li>
-      <li><strong>Self-host</strong>: Run the gateway on your own server for complete data control.</li>
-      <li><strong>Inspect</strong>: The extension's privacy practices are fully documented in this policy.</li>
-    </ul>
+    <h2>Data Storage and Deletion</h2>
+    <p>Extension settings, authentication tokens, and local style preferences are stored in <code>chrome.storage.local</code>. Account records and cloud-synced style profiles are stored on the gateway infrastructure; one-time email codes expire after 15 minutes. Use "Clear Style Profile" in the popup to remove saved local style preferences and samples. Uninstalling the extension removes its local data from that browser. To request deletion of server-side account data, email <a href="mailto:moeohana808@gmail.com">moeohana808@gmail.com</a> from your account address. We will verify the request and delete the associated account record and synced style profile. Payment records may need to be retained by Stripe or for legal and financial obligations.</p>
+
+    <h2>Chrome Web Store Limited Use</h2>
+    <p>CoWriterAI's use and transfer of information received from Google APIs adheres to the Chrome Web Store User Data Policy, including its Limited Use requirements. Google account data is used only to authenticate you and provide requested account features. It is not sold or used for advertising, and is shared only as needed to provide those features, for security, or as required by law.</p>
 
     <h2>Contact</h2>
-    <p>For privacy questions, email <a href="mailto:jpgalik@gmail.com">jpgalik@gmail.com</a> or open an issue on <a href="https://github.com/GzJmac/ai-cowriter/issues" target="_blank">GitHub</a>.</p>
+    <p>For privacy questions, email <a href="mailto:moeohana808@gmail.com">moeohana808@gmail.com</a> or open an issue on <a href="https://github.com/GzJmac/ai-cowriter/issues" target="_blank">GitHub</a>.</p>
 
     <footer>
       <p><a href="index.html">← CoWriterAI Home</a> · © 2026 CoWriterAI</p>
